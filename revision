@@ -1,0 +1,19 @@
+function renderRevision() {
+  let html = "<h2>📚 Révisions</h2>";
+  for (let day in revision) {
+    html += `
+      <div class="item">
+        <label>
+          <input type="checkbox" ${data.revision[day] ? "checked" : ""} 
+          onchange="toggleRevision('${day}')">
+          ${day} — ${revision[day]}
+        </label>
+      </div>`;
+  }
+  document.getElementById("revision").innerHTML = html;
+}
+
+function toggleRevision(day) {
+  data.revision[day] = !data.revision[day];
+  save(); render();
+}
