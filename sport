@@ -1,0 +1,19 @@
+function renderSport() {
+  let html = "<h2>🏋️ Sport</h2>";
+  for (let day in sport) {
+    html += `
+      <div class="item">
+        <label>
+          <input type="checkbox" ${data.sport[day] ? "checked" : ""} 
+          onchange="toggleSport('${day}')">
+          ${day} — ${sport[day]}
+        </label>
+      </div>`;
+  }
+  document.getElementById("sport").innerHTML = html;
+}
+
+function toggleSport(day) {
+  data.sport[day] = !data.sport[day];
+  save(); render();
+}
