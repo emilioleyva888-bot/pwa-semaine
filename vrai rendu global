@@ -1,0 +1,13 @@
+function render() {
+  renderSport();
+  renderRevision();
+  renderTravail();
+  renderSuivi();
+  renderProgression();
+}
+
+render();
+
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
