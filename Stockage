@@ -1,0 +1,11 @@
+let data = JSON.parse(localStorage.getItem("data")) || {
+  sport: {},
+  revision: {},
+  travail: { Math: 0, "Meca G": 0, "Électronique": 0, "Computer Science": 0 },
+  screenTime: [],
+  toilet: []
+};
+
+function save() {
+  localStorage.setItem("data", JSON.stringify(data));
+}
