@@ -1,0 +1,20 @@
+function renderSuivi() {
+  document.getElementById("suivi").innerHTML = `
+    <h2>📱 Suivi quotidien</h2>
+    <button onclick="addScreen()">Ajouter temps d’écran</button>
+    <button onclick="addToilet()">🚽 +1</button>
+    <p>Temps d’écran (heures): ${data.screenTime.join(", ")}</p>
+    <p>Toilettes: ${data.toilet.length}</p>
+  `;
+}
+
+function addScreen() {
+  const t = prompt("Temps d’écran (heures) ?");
+  if (t) data.screenTime.push(t);
+  save(); render();
+}
+
+function addToilet() {
+  data.toilet.push(Date.now());
+  save(); render();
+}
