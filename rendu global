@@ -1,0 +1,9 @@
+function renderProgression() {
+  const sportDone = Object.values(data.sport).filter(v => v).length;
+  const revDone = Object.values(data.revision).filter(v => v).length;
+
+  document.getElementById("progression").innerHTML = `
+    <h2>📈 Progression</h2>
+    <p>Sport : ${sportDone} / ${Object.keys(sport).length}</p>
+    <p>Révisions : ${revDone} / ${Object.keys(revision).length}</p>
+  `;
