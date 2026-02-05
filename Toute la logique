@@ -1,0 +1,17 @@
+app.js
+const sport = {
+  Lundi: "Triceps / Épaules / Dos",
+  Mardi: "Course",
+  Mercredi: "Biceps / Bench / Dos",
+  Jeudi: "Leg day"
+};
+
+const revision = {
+  Lundi: "Math",
+  Mardi: "Électricité",
+  Mercredi: "Méga G",
+  Jeudi: "Thermo / Électronique",
+  Vendredi: "Computer Programming / Meca D"
+};
+
+const travailCols = ["Math", "Meca G", "Électronique", "Computer Science"];
