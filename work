@@ -1,0 +1,17 @@
+function renderTravail() {
+  let html = "<h2>💼 Travail</h2>";
+  travailCols.forEach(col => {
+    html += `
+      <div class="item">
+        <span>${col}</span>
+        <button onclick="addWork('${col}')">+2</button>
+        <span class="counter">${data.travail[col]}</span>
+      </div>`;
+  });
+  document.getElementById("travail").innerHTML = html;
+}
+
+function addWork(col) {
+  data.travail[col] += 2;
+  save(); render();
+}
